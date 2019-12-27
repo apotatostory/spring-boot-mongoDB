@@ -1,0 +1,23 @@
+#Tomcat config
+server:
+  port: 60001
+spring:
+  application:
+    name: service-mongoDB
+  devtools:
+    restart:
+      enable: true
+#  MONGODB (MongoProperties)
+  data:
+    mongodb:
+      uri: mongodb://admin123123:admin123123@ds155315.mlab.com:55315/character
+#      host: 127.0.0.1
+#      port: 27017
+#      database: people
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+#  instance:
+#    preferIpAddress: false
+#    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
