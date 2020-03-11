@@ -127,7 +127,9 @@ public class MongoDBController {
 	@RequestMapping(path = "/getMenu", method = RequestMethod.GET)
 	public ResponseEntity<?> getMenu() {
 		logger.info("##### getMenu start!!! #####");
+
 		Map<String, List<MenuEntity>> menuMap = menuService.getMenu();
+
 		List<MenuModel> result = menuMap.values().stream().map(x -> {
 			MenuModel model = new MenuModel();
 			model.setCateName(x.get(0).getName());
@@ -224,9 +226,9 @@ public class MongoDBController {
 
 		if (request.getBorker() != null) {
 			BrokerEntity entity = new BrokerEntity();
-			
+
 			BeanUtils.copyProperties(request.getBorker(), entity);
-			
+
 			entitys.add(entity);
 		}
 
@@ -243,6 +245,7 @@ public class MongoDBController {
 		brokerService.setBroker(entitys);
 
 		logger.info("##### setBroker end!!! #####");
+
 		return ResponseEntity.ok(response);
 	}
 
