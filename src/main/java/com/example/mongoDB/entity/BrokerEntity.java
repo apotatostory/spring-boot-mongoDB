@@ -6,49 +6,50 @@ import org.springframework.data.mongodb.core.mapping.Field;
 
 @Document(collection = "BROKER")
 public class BrokerEntity {
-	
+
 	@Field(value = "BROKERID")
-	private String BrokerId;
+	private String brokerId;
 
 	@Field(value = "BROKERNAME")
-	private String BrokerName;
+	private String brokerName;
 
 	@Id
 	@Field(value = "BRANCHID")
-	private String BranchId;
+	private String branchId;
 
 	@Field(value = "BRANCHNAME")
-	private String BranchName;
+	private String branchName;
 
 	public String getBrokerId() {
-		return BrokerId;
+		return brokerId;
 	}
 
 	public void setBrokerId(String brokerId) {
-		BrokerId = brokerId;
+		this.brokerId = brokerId;
 	}
 
 	public String getBrokerName() {
-		return BrokerName;
+		return brokerName;
 	}
 
 	public void setBrokerName(String brokerName) {
-		BrokerName = brokerName;
+		this.brokerName = brokerName;
 	}
 
 	public String getBranchId() {
-		return BranchId;
+		return branchId;
 	}
 
 	public void setBranchId(String branchId) {
-		BranchId = branchId;
+		this.branchId = branchId;
 	}
 
 	public String getBranchName() {
-		return BranchName;
+		return branchName;
 	}
 
 	public void setBranchName(String branchName) {
-		BranchName = branchName;
+		this.branchName = branchName;
 	}
+
 }

@@ -1,7 +1,6 @@
 package com.example.mongoDB.service.impl;
 
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.BeanUtils;
@@ -20,15 +19,13 @@ public class BrokerServiceImpl implements IBrokerService {
 	BrokerRepository brokerRepository;
 
 	@Override
-	public Map<String, List<BrokerVo>> getBroker() {
-		List<BrokerEntity> brokers = brokerRepository.findAll();
-		Map<String, List<BrokerVo>> result = brokers.stream().map(broker -> {
+	public List<BrokerVo> getBroker() {
+
+		return brokerRepository.findAll().stream().map(broker -> {
 			BrokerVo vo = new BrokerVo();
 			BeanUtils.copyProperties(broker, vo);
 			return vo;
-		}).collect(Collectors.groupingBy(BrokerVo::getBrokerId));
-
-		return result;
+		}).collect(Collectors.toList());
 	}
 
 	@Override
