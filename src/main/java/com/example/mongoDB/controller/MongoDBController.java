@@ -25,6 +25,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.model.BaseRs;
+import com.example.model.BrokerRequest;
+import com.example.model.BrokerResponse;
+import com.example.model.MenuRequest;
+import com.example.model.OrderRequest;
+import com.example.model.OrderResponse;
 import com.example.mongoDB.entity.BrokerEntity;
 import com.example.mongoDB.entity.MenuEntity;
 import com.example.mongoDB.entity.ProductEntity;
@@ -38,15 +44,9 @@ import com.example.mongoDB.service.IMenuService;
 import com.example.mongoDB.service.IStockDetailService;
 import com.example.mongoDB.service.IStorageService;
 import com.example.mongoDB.service.IUserService;
-import com.example.springbootfeignclient.model.BaseRs;
-import com.example.springbootfeignclient.model.BrokerRequest;
-import com.example.springbootfeignclient.model.BrokerResponse;
-import com.example.springbootfeignclient.model.MenuRequest;
-import com.example.springbootfeignclient.model.OrderRequest;
-import com.example.springbootfeignclient.model.OrderResponse;
-import com.example.springbootfeignclient.utils.BigDecimalUtils;
-import com.example.springbootfeignclient.vo.OrderVo;
-import com.example.springbootfeignclient.vo.StockVo;
+import com.example.utils.BigDecimalUtils;
+import com.example.vo.OrderVo;
+import com.example.vo.StockVo;
 
 @RestController
 @EnableAutoConfiguration

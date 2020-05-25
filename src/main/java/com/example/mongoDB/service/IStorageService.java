@@ -3,7 +3,7 @@ package com.example.mongoDB.service;
 import java.util.List;
 
 import com.example.mongoDB.entity.ProductEntity;
-import com.example.springbootfeignclient.vo.OrderVo;
+import com.example.vo.OrderVo;
 
 public interface IStorageService {
 

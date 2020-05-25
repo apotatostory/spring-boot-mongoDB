@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import com.example.mongoDB.entity.BrokerEntity;
 import com.example.mongoDB.repository.BrokerRepository;
 import com.example.mongoDB.service.IBrokerService;
-import com.example.springbootfeignclient.vo.BrokerVo;
+import com.example.vo.BrokerVo;
 
 @Service("brokerService")
 public class BrokerServiceImpl implements IBrokerService {

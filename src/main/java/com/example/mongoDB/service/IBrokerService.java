@@ -3,7 +3,7 @@ package com.example.mongoDB.service;
 import java.util.List;
 
 import com.example.mongoDB.entity.BrokerEntity;
-import com.example.springbootfeignclient.vo.BrokerVo;
+import com.example.vo.BrokerVo;
 
 public interface IBrokerService {
 	public List<BrokerVo> getBroker();

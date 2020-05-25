@@ -1,1 +1,5 @@
 rootProject.name = 'mongoDB'
+// import common library
+include ':spring-boot-common'
+
+project(':spring-boot-common').projectDir = new File('../spring-boot-common/');

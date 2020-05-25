@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import com.example.mongoDB.entity.ProductEntity;
 import com.example.mongoDB.repository.ProductRepository;
 import com.example.mongoDB.service.IStorageService;
-import com.example.springbootfeignclient.vo.OrderVo;
+import com.example.vo.OrderVo;
 
 @Service("storageService")
 public class StorageServiceImpl implements IStorageService {
